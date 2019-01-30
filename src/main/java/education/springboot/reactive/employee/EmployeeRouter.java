@@ -18,6 +18,7 @@ public class EmployeeRouter {
         return route(GET("/employees"), handler::all)
                 .andRoute(POST("/employees"), handler::create)
                 .andRoute(GET("/employees/{id}"), handler::find)
+                .andRoute(GET("/sse"), handler::sse)
                 .andRoute(PUT("/employees/{id}"), handler::update)
                 .andRoute(DELETE("/employees/{id}"), handler::delete)
                 ;
